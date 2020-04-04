@@ -1,36 +1,60 @@
 @import '_variables';
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css');
 
+body {    
+    font-family: $font-secondary;
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    text-align: center;
+}
+
 li {
     text-decoration: none;
     display: inline-block;
 }
 
-.title {    
-    h1{
-        color: $purple;
-        font-size: 50pt;
-        font-family: 'Lato', sans-serif;
+h1 {
+    color: $purple;
+    font-size: 50pt;
+    font-family: $font-primary;
+}
+h2 {
+    
+}
+h3 {
+    color: $purple;
+    font-size: 25pt;
+    border-bottom: 5px solid #5F5AA2;
+    display: inline-block;
+}
+h4 {
+    font-size: 20pt;
+    color: $light-grey;
+}
+
+.title {  
+     width: auto;
+     margin: auto;
+     display: inline-block;
+     position: relative;
+    h1 {
         width: auto;
-        margin: auto;
         margin-top: 100px;
-        display: inline-block;
-        position: relative;
-        
+        display: inline-block;     
 
         &:before {
-            content:'<';
-            left: -35px;
+            content:'<';            
         }
         &:after {
-            content:'/>';
-            right: -60px;
+            content:'/>';            
         }
         &:before, &:after {
             display: inline-block;
-            position: absolute;    
+            position: relative;    
             z-index: -9;
-            color: #3F4045;
+            color: $dark-grey;
             opacity: .3;
         }
     }
@@ -43,15 +67,25 @@ li {
     p { 
         font-size: 18pt;
         text-align: justify;
-        color: #413F54;
+        color: $dark-grey;
     }
     a{
         font-size: 30pt;
+        color: $dark-grey;        
+        &:hover {
+            color: $purple;    
+        }
+    }
+    ul {
+        margin: 0;
+        li{
+            margin: 10px;
+        }
     }
 }
 
 .content {
-    width: 60%; 
+    width: 100%; 
     margin: auto;
     height: 800px;
     ul {
@@ -62,17 +96,21 @@ li {
         text-decoration: none;
         display: inline-block;
         margin: 15px;
-        color: #413F54;
+        color: $dark-grey;
+
+        &:hover {
+            color: $purple;
+            transform: scale(1.1);
+        }
     }
-    li a {    
-        border: none;
-    }
+    
 
     ul.tech {    
         font-size: 30pt;
     }
     ul.services {    
         font-size: 20pt;
+        font-weight: 500;
     }
 
     a {
@@ -83,7 +121,7 @@ li {
         color: initial;
     }
     a:hover{
-        color: #355691;
+        color: $blue;
     }
 
     .technologies {

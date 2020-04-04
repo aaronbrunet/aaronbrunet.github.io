@@ -1,5 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub, faLinkedinIn, faHtml5, faCss3Alt, faJsSquare, faReact, faJava } from '@fortawesome/free-brands-svg-icons'
+
 
 import Layout from "../components/layout"
 import Image from "../components/image"
@@ -20,8 +23,8 @@ const IndexPage = () => (
       <div className="about">
       <p>Developer based in Orlando, FL. Special interest in emerging technologies and the changing face of the web.</p>
       <ul>
-            <li><a href="https://github.com/aaronbrunet" target="_blank"><i class="fab fa-github-square"></i></a></li>
-            <li><a href="https://www.linkedin.com/in/aaronwbrunet/" target="_blank"><i class="fab fa-linkedin"></i></a></li>            
+            <li><a href="https://github.com/aaronbrunet" target="_blank"><FontAwesomeIcon icon={faGithub} /></a></li>
+            <li><a href="https://www.linkedin.com/in/aaronwbrunet/" target="_blank"><FontAwesomeIcon icon={faLinkedinIn} /></a></li>            
         </ul> 
       </div>
     </div>
@@ -32,19 +35,19 @@ const IndexPage = () => (
                 <h4 className="section">Languages & Frameworks</h4>
                 <ul className="tech">            
                     <li>
-                        <i className="fab fa-html5"></i>
+                      <FontAwesomeIcon icon={faHtml5} />                       
                     </li>
                     <li>
-                        <i className="fab fa-css3-alt"></i>
+                      <FontAwesomeIcon icon={faCss3Alt} />
                     </li>
                     <li>
-                        <i className="fab fa-js-square"></i>
+                    <FontAwesomeIcon icon={faJsSquare} />
                     </li>            
                     <li>
-                        <i className="fab fa-react"></i>
+                    <FontAwesomeIcon icon={faReact} />
                     </li>
                     <li>
-                        <i className="fab fa-java"></i>
+                    <FontAwesomeIcon icon={faJava} />
                     </li>
                 </ul>
             </div>

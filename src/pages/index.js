@@ -20,7 +20,7 @@ const IndexPage = () => (
     <div className="title">
       <h1>Aaron Brunet</h1>
       <div className="about">
-      <p>Developer based in Orlando, FL. Special interest in emerging technologies and the changing face of the web.</p>
+      <p>Developer based in Orlando, Florida. Special interest in emerging technologies and the changing face of the web.</p>
       <ul>
             <li><a href="https://github.com/aaronbrunet" target="_blank"><FontAwesomeIcon icon={faGithub} /></a></li>
             <li><a href="https://www.linkedin.com/in/aaronwbrunet/" target="_blank"><FontAwesomeIcon icon={faLinkedinIn} /></a></li>            

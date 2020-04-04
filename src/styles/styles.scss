@@ -1,7 +1,12 @@
 @import '_variables';
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css');
 
-.title {
-    
+li {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.title {    
     h1{
         color: $purple;
         font-size: 50pt;
@@ -31,7 +36,61 @@
     }
 }
 
-p.about {
-    font-size: 15pt;
-    color: #413F54;
+
+.about { 
+    width: 50%;
+    margin: auto;    
+    p { 
+        font-size: 18pt;
+        text-align: justify;
+        color: #413F54;
+    }
+    a{
+        font-size: 30pt;
+    }
+}
+
+.content {
+    width: 60%; 
+    margin: auto;
+    height: 800px;
+    ul {
+        padding: 0;
+    }
+
+    li {
+        text-decoration: none;
+        display: inline-block;
+        margin: 15px;
+        color: #413F54;
+    }
+    li a {    
+        border: none;
+    }
+
+    ul.tech {    
+        font-size: 30pt;
+    }
+    ul.services {    
+        font-size: 20pt;
+    }
+
+    a {
+        text-decoration: none;    
+    }
+
+    a:visited{
+        color: initial;
+    }
+    a:hover{
+        color: #355691;
+    }
+
+    .technologies {
+        display: flex;
+        direction: row;
+    }
+    .column {
+        flex: 1;
+    }
 }

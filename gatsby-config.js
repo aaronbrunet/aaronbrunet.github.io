@@ -4,7 +4,7 @@ module.exports = {
     description: `Portfolio for Aaron Brunet, Orlando-based developer with a focus on the changing face of the web.`,
     author: `@aaronbrunet`,
   },
-  pathPrefix:'/aaronbrunet-gatsby',
+  pathPrefix:'/aaronbru.net-gatsby',
   plugins: [
     `gatsby-plugin-sass`,
     {
@@ -30,9 +30,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `aaronbrunet-gatsby`,
+        name: `aaronbru.net-gatsby`,
         short_name: `starter`,
-        start_url: `./aaronbrunet-gatsby/`,
+        start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,

@@ -4,6 +4,7 @@ module.exports = {
     description: `Portfolio for Aaron Brunet, Orlando-based developer with a focus on the changing face of the web.`,
     author: `@aaronbrunet`,
   },
+  pathPrefix:`/aaronbrunet-gatsby`,
   plugins: [
     `gatsby-plugin-sass`,
     {

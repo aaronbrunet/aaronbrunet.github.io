@@ -29,9 +29,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
+        name: `aaronbrunet-gatsby`,
         short_name: `starter`,
-        start_url: `/`,
+        start_url: `/aaronbrunet-gatsby/`,
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,

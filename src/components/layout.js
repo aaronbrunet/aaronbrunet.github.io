@@ -12,7 +12,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import "./layout.css"
 import '../styles/styles.scss'
-import fontawesome from '@fortawesome/fontawesome';
+import fontawesome from '@fortawesome/react-fontawesome';
 fontawesome.config = {
 	autoAddCss: false
 };

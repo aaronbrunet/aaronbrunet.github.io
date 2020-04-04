@@ -87,7 +87,7 @@ h4 {
 .content {
     width: 100%; 
     margin: auto;
-    height: 800px;
+    margin-top: 50px;
     ul {
         padding: 0;
     }
@@ -100,7 +100,8 @@ h4 {
 
         &:hover {
             color: $purple;
-            transform: scale(1.1);
+            //transform: scale(1.05);
+            border-bottom: 3px solid $purple;
         }
     }
     
@@ -131,4 +132,11 @@ h4 {
     .column {
         flex: 1;
     }
+}
+
+footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    color: $purple;
 }

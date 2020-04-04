@@ -12,10 +12,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import "./layout.css"
 import '../styles/styles.scss'
-import fontawesome from '@fortawesome/react-fontawesome';
-fontawesome.config = {
-	autoAddCss: false
-};
+import 'font-awesome/css/font-awesome.min.css';
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`

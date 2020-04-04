@@ -3,7 +3,6 @@ import { Link } from "gatsby"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedinIn, faHtml5, faCss3Alt, faJsSquare, faReact, faJava } from '@fortawesome/free-brands-svg-icons'
 
-
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"

@@ -1,10 +1,10 @@
 module.exports = {
   siteMetadata: {
     title: `Aaron Brunet`,
-    description: `Portfolio for Aaron Brunet, Orlando-based developer with a focus on the changing face of the web.`,
+    description: `Dev portfolio for Aaron Brunet, Orlando-based developer with a focus on the changing face of the web.`,
     author: `@aaronbrunet`,
   },
-  pathPrefix:`/aaronbru.net-gatsby`,
+  pathPrefix:`/`,
   plugins: [
     `gatsby-plugin-sass`,
     {
@@ -50,7 +50,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `aaronbru.net-gatsby`,
+        name: `aaronbrunet.dev-gatsby`,
         short_name: `starter`,
         start_url: `/`,
         background_color: `#663399`,

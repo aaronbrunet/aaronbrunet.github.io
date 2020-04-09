@@ -18,7 +18,7 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <div className="title">
-      <h1>Aaron Brunet</h1>
+      <h1>Aaron Brunet.dev</h1>
       <div className="about">
       <p>Developer based in Orlando, Florida. Special interest in emerging technologies and the changing face of the web.</p>
       <ul>

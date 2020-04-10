@@ -1,20 +1,16 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, useStaticQuery, graphql } from "gatsby"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedinIn, faHtml5, faCss3Alt, faJsSquare, faReact, faJava } from '@fortawesome/free-brands-svg-icons'
+
 
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 
-/**
- * <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
- * <Image />
- * </div>
- */
-
 
 const IndexPage = () => (
+  
   <Layout>
     <SEO title="Home" />
     <div className="title">
@@ -26,7 +22,11 @@ const IndexPage = () => (
             <li><a href="https://www.linkedin.com/in/aaronwbrunet/" target="_blank"><FontAwesomeIcon icon={faLinkedinIn} /></a></li>            
         </ul> 
       </div>
+      
     </div>
+    <Image/>
+    <h2><i>Under Construction</i></h2>
+    {/*
     <div className="content">
         <h3>Technologies</h3>
         <div className="technologies">        
@@ -60,7 +60,7 @@ const IndexPage = () => (
             </div>
         </div>        
     </div>
-    {/*<Link to="/page-2/">Go to page 2</Link>*/}
+    */}
   </Layout>
 )
 

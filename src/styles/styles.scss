@@ -25,7 +25,13 @@ h1 {
     font-family: $font-primary;
 }
 h2 {
-    
+    color: $purple;
+    background: rgb(95,90,162);
+    background: -webkit-linear-gradient(135deg, rgba(95,90,162,1) 0%, rgba(185,70,102,1) 100%);    
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 30pt;
+    font-family: $font-primary;
 }
 h3 {
     color: $purple;

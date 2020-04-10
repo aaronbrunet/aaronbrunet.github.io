@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Aaron Brunet`,
+    title: `AaronBrunet.dev`,
     description: `Dev portfolio for Aaron Brunet, Orlando-based developer with a focus on the changing face of the web.`,
     author: `@aaronbrunet`,
   },

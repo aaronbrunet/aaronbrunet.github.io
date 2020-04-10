@@ -154,3 +154,19 @@ footer {
     bottom: 0;
     color: $purple;
 }
+
+@media (max-width: 800px){
+.about {
+    width: 80%;
+    p {
+        font-size: 14pt;
+        text-align: left;
+    }
+}
+h1 {
+    font-size: 30pt;
+}
+
+
+
+}

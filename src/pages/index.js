@@ -107,6 +107,16 @@ const links = [
     color: "#E95800",
     github: "https://github.com/aaronbrunet/prepare-to-die",
     tech: ['React','styled-components']
+  },
+  {
+    text: "aaronbru.net / aaronbrunet.dev",
+    url: "https://aaronbru.net",
+    description:
+      "A personal portfolio site to showcase my experience, projects, hobbies, and more.",
+    color: "#1099A8",
+    github: 'https://github.com/aaronbrunet/aaronbrunet.github.io',
+    tech: ['React','Gatsby','Tailwind CSS'],
+    wip: true
   },  
 ]
 

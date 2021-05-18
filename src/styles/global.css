@@ -2,3 +2,64 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    .gradient{
+        color: #5f5aa2;
+        background: #5f5aa2;
+        background: -webkit-linear-gradient(135deg,#5f5aa2,#b94666);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .title {
+        margin: 0;
+        line-height: 1.15;
+        font-size: 4rem;
+        text-align: center;
+    }
+
+    .links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 50%;
+        margin: auto;    
+      }
+      
+      .links a {
+        font-size: 3rem;
+        color: #413f54; 
+        //width: 2em;
+        margin: .5em;
+      }
+      
+      .links a:hover {
+        color: #5f5aa2;
+      } 
+
+      .description {
+        line-height: 1.5;
+        font-size: 1rem;
+        width: 60%;
+        color: #413f54;
+        margin: auto;
+      }
+
+      .footer {
+        width: 100%;
+        height: 100px;
+        border-top: 1px solid #eaeaea;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      .footer a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+        color: #5f5aa2;
+      }
+}

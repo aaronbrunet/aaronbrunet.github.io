@@ -1,4 +1,7 @@
 import * as React from "react"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLink } from  '@fortawesome/free-solid-svg-icons'
+import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 
 // styles
 const pageStyles = {
@@ -36,16 +39,10 @@ const listItemStyles = {
 }
 
 const linkStyle = {
-  color: "#8954A8",
+  color: "#b94666",
   fontWeight: "bold",
   fontSize: 16,
   verticalAlign: "5%",
-}
-
-const docLinkStyle = {
-  ...linkStyle,
-  listStyleType: "none",
-  marginBottom: 24,
 }
 
 const descriptionStyle = {
@@ -54,12 +51,6 @@ const descriptionStyle = {
   marginTop: 10,
   marginBottom: 0,
   lineHeight: 1.25,
-}
-
-const docLink = {
-  text: "Documentation",
-  url: "https://www.gatsbyjs.com/docs/",
-  color: "#8954A8",
 }
 
 const badgeStyle = {
@@ -78,42 +69,53 @@ const badgeStyle = {
   lineHeight: 1,
 }
 
+const techBadgeStyle = {
+  color: "#fff",
+  backgroundColor: "#5f5aa2",
+  border: "1px solid #5f5aa2",
+  opacity: .7,
+  fontSize: 11,
+  fontWeight: "bold",
+  letterSpacing: 1,
+  borderRadius: 4,
+  padding: "4px 6px",
+  display: "inline-block",
+  position: "relative",
+  top: -2,
+  marginLeft: 10,
+  lineHeight: 1,
+}
+
+const subLinkStyle = {
+  color: "#5f5aa2",
+  fontSize: ".5em",
+  fontWeight: "bold",
+  letterSpacing: 1,
+  position: "relative",
+  top: -2,
+  marginLeft: 10,
+  lineHeight: 1,
+}
+
 // data
 const links = [
   {
-    text: "Tutorial",
-    url: "https://www.gatsbyjs.com/docs/tutorial/",
+    text: "R&ller: Prepare To Die",
+    url: "https://aaronbrunet.dev/prepare-to-die/",
     description:
-      "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
+      "R&ller was an introductory experiment into the world of React. Built to act as a dice roller for a tabletop game like D&D, R&ller aimed to provide every kind of dice used, as well as modifiers.",
     color: "#E95800",
+    github: "https://github.com/aaronbrunet/prepare-to-die",
+    tech: ['React','styled-components']
   },
   {
-    text: "How to Guides",
-    url: "https://www.gatsbyjs.com/docs/how-to/",
+    text: "Write Like The Wind",
+    url: "https://aaronbrunet.dev/write-sprinter/",
     description:
-      "Practical step-by-step guides to help you achieve a specific goal. Most useful when you're trying to get something done.",
+      "Write Like The Wind was written to facilitate writing sprints, such as for a creative writing class, blogging, journaling, or a competition like NaNoWriMo - in fact, the impetus for the project was the sad attempts at manual timekeeping and word-tracking for a NaNoWriMo writing group. Choose the length of time, click 'Start', and get writing!",
     color: "#1099A8",
-  },
-  {
-    text: "Reference Guides",
-    url: "https://www.gatsbyjs.com/docs/reference/",
-    description:
-      "Nitty-gritty technical descriptions of how Gatsby works. Most useful when you need detailed information about Gatsby's APIs.",
-    color: "#BC027F",
-  },
-  {
-    text: "Conceptual Guides",
-    url: "https://www.gatsbyjs.com/docs/conceptual/",
-    description:
-      "Big-picture explanations of higher-level Gatsby concepts. Most useful for building understanding of a particular topic.",
-    color: "#0D96F2",
-  },
-  {
-    text: "Plugin Library",
-    url: "https://www.gatsbyjs.com/plugins",
-    description:
-      "Add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.",
-    color: "#8EB814",
+    github: 'https://github.com/aaronbrunet/write-sprinter',
+    tech: ['React','Tailwind CSS']
   },
   {
     text: "Build and Host",
@@ -130,54 +132,66 @@ const IndexPage = () => {
   return (
     <main style={pageStyles}>
       <title>Home Page</title>
-      <h1 style={headingStyles}>
-        Congratulations
-        <br />
-        <span style={headingAccentStyles}>— you just made a Gatsby site! </span>
-        <span role="img" aria-label="Party popper emojis">
-          🎉🎉🎉
-        </span>
-      </h1>
-      <p style={paragraphStyles}>
-        Edit <code style={codeStyles}>src/pages/index.js</code> to see this page
-        update in real-time.{" "}
-        <span role="img" aria-label="Sunglasses smiley emoji">
-          😎
-        </span>
+      <h1 className='title'>
+          <a className='gradient' href="https://aaronbrunet.dev">{'<'}aaronbrunet.dev{'/>'}</a>
+        </h1>      
+      <p className='description'>
+      Developer based in Orlando, Florida. Special interest in emerging technologies and the changing face of the web.
       </p>
+
+      <div className='links'>
+          <a href="https://github.com/aaronbrunet" target="_blank"><FontAwesomeIcon icon={faGithub} /></a>
+          <a href="https://www.linkedin.com/in/aaronwbrunet/" target="_blank"><FontAwesomeIcon icon={faLinkedinIn} /></a>
+      </div>
+
       <ul style={listStyles}>
-        <li style={docLinkStyle}>
-          <a
-            style={linkStyle}
-            href={`${docLink.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
-          >
-            {docLink.text}
-          </a>
-        </li>
         {links.map(link => (
           <li key={link.url} style={{ ...listItemStyles, color: link.color }}>
             <span>
               <a
                 style={linkStyle}
-                href={`${link.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
+                href={`${link.url}`} target='_blank'
               >
                 {link.text}
               </a>
+              {link.tech?.map(tech=>(
+                <span style={techBadgeStyle} aria-label={"Badge"}>
+                {tech}
+              </span>
+              ))}             
               {link.badge && (
-                <span style={badgeStyle} aria-label="New Badge">
+                <span style={badgeStyle} aria-label={"New Badge"}>
                   NEW!
                 </span>
               )}
-              <p style={descriptionStyle}>{link.description}</p>
+              <p style={descriptionStyle}>{link.description}</p>  
+              <a
+                style={subLinkStyle}
+                href={`${link.url}`} target='_blank'
+              >
+                Project<FontAwesomeIcon icon={faLink} />
+              </a>
+              {link.github && (
+                <a style={subLinkStyle} href={`${link.github}`} target='_blank'>
+                  GitHub<FontAwesomeIcon icon={faLink} />
+                </a>
+              )}            
             </span>
           </li>
         ))}
       </ul>
-      <img
-        alt="Gatsby G Logo"
-        src="data:image/svg+xml,%3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2a10 10 0 110 20 10 10 0 010-20zm0 2c-3.73 0-6.86 2.55-7.75 6L14 19.75c3.45-.89 6-4.02 6-7.75h-5.25v1.5h3.45a6.37 6.37 0 01-3.89 4.44L6.06 9.69C7 7.31 9.3 5.63 12 5.63c2.13 0 4 1.04 5.18 2.65l1.23-1.06A7.959 7.959 0 0012 4zm-8 8a8 8 0 008 8c.04 0 .09 0-8-8z' fill='%23639'/%3E%3C/svg%3E"
-      />
+      <h1 className=''>Check out my <a style={linkStyle} href="https://github.com/aaronbrunet">GitHub</a> to see what else I'm working on!</h1>
+      <footer className='footer'>
+        <a
+          href="https://aaronbru.net"
+          target="_blank"
+          rel="noopener noreferrer"
+        >          
+          Aaron Brunet © {new Date().getFullYear()}
+        </a>
+      </footer>
     </main>
+    
   )
 }
 

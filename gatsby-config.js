@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: "aaronbrunet.github.io",
+    title: "Aaron Brunet | aaronbrunet.dev",
   },
   plugins: ["gatsby-plugin-react-helmet",`gatsby-plugin-postcss`],
 };

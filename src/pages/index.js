@@ -9,24 +9,6 @@ const pageStyles = {
   padding: 96,
   fontFamily: "-apple-system, Roboto, sans-serif, serif",
 }
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
-const headingAccentStyles = {
-  color: "#663399",
-}
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
 const listStyles = {
   marginBottom: 96,
   paddingLeft: 0,
@@ -53,10 +35,10 @@ const descriptionStyle = {
   lineHeight: 1.25,
 }
 
-const badgeStyle = {
+const wipStyle = {
   color: "#fff",
-  backgroundColor: "#088413",
-  border: "1px solid #088413",
+  backgroundColor: "#f16e51",
+  border: "1px solid #f16e51",
   fontSize: 11,
   fontWeight: "bold",
   letterSpacing: 1,
@@ -73,8 +55,8 @@ const techBadgeStyle = {
   color: "#fff",
   backgroundColor: "#5f5aa2",
   border: "1px solid #5f5aa2",
-  opacity: .7,
-  fontSize: 11,
+  opacity: .5,
+  fontSize: 8,
   fontWeight: "bold",
   letterSpacing: 1,
   borderRadius: 4,
@@ -89,25 +71,16 @@ const techBadgeStyle = {
 const subLinkStyle = {
   color: "#5f5aa2",
   fontSize: ".5em",
-  fontWeight: "bold",
+  fontWeight: 'bold',
   letterSpacing: 1,
   position: "relative",
   top: -2,
-  marginLeft: 10,
+  marginRight: 5,
   lineHeight: 1,
 }
 
 // data
 const links = [
-  {
-    text: "R&ller: Prepare To Die",
-    url: "https://aaronbrunet.dev/prepare-to-die/",
-    description:
-      "R&ller was an introductory experiment into the world of React. Built to act as a dice roller for a tabletop game like D&D, R&ller aimed to provide every kind of dice used, as well as modifiers.",
-    color: "#E95800",
-    github: "https://github.com/aaronbrunet/prepare-to-die",
-    tech: ['React','styled-components']
-  },
   {
     text: "Write Like The Wind",
     url: "https://aaronbrunet.dev/write-sprinter/",
@@ -118,13 +91,24 @@ const links = [
     tech: ['React','Tailwind CSS']
   },
   {
-    text: "Build and Host",
-    url: "https://www.gatsbyjs.com/cloud",
-    badge: true,
+    text: "Do The Write Thing",
+    url: "",
     description:
-      "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
-    color: "#663399",
+      `Do The Write Thing is a writing progress tracker written to augment NaNoWriMo progress. Users can enter a goal, track their daily progress, and view the overall progress of their project, and see updates realtime. This effort is still in progress, but on the backburner.`,
+    color: "#1099A8",
+    github: 'https://github.com/aaronbrunet/dowritething',
+    tech: ['React','Tailwind CSS','Firebase'],
+    wip: true
   },
+  {
+    text: "R&ller: Prepare To Die",
+    url: "https://aaronbrunet.dev/prepare-to-die/",
+    description:
+      "R&ller was an introductory experiment into the world of React. Built to act as a dice roller for a tabletop game like D&D, R&ller aimed to provide every kind of dice used, as well as modifiers.",
+    color: "#E95800",
+    github: "https://github.com/aaronbrunet/prepare-to-die",
+    tech: ['React','styled-components']
+  },  
 ]
 
 // markup
@@ -154,23 +138,23 @@ const IndexPage = () => {
               >
                 {link.text}
               </a>
+              {link.wip && (
+                <span style={wipStyle} aria-label={"WIP"}>
+                WIP
+              </span>
+              )}
               {link.tech?.map(tech=>(
                 <span style={techBadgeStyle} aria-label={"Badge"}>
                 {tech}
               </span>
-              ))}             
-              {link.badge && (
-                <span style={badgeStyle} aria-label={"New Badge"}>
-                  NEW!
-                </span>
-              )}
+              ))}   
               <p style={descriptionStyle}>{link.description}</p>  
-              <a
+              {link.url !== '' && (<a
                 style={subLinkStyle}
                 href={`${link.url}`} target='_blank'
               >
                 Project<FontAwesomeIcon icon={faLink} />
-              </a>
+              </a>)}
               {link.github && (
                 <a style={subLinkStyle} href={`${link.github}`} target='_blank'>
                   GitHub<FontAwesomeIcon icon={faLink} />

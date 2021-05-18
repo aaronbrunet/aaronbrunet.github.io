@@ -24,7 +24,6 @@ const linkStyle = {
   color: "#b94666",
   fontWeight: "bold",
   fontSize: 16,
-  verticalAlign: "5%",
 }
 
 const descriptionStyle = {

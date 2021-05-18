@@ -109,6 +109,15 @@ const links = [
     tech: ['React','styled-components']
   },
   {
+    text: "A Friendly Tip",
+    url: "https://aaronbrunet.dev/friendly-tip/",
+    description:
+      "Tired of fumbling for the Calculator app at the end of a meal and working out .2 x subtotal, I wrote 'A Friendly Tip' as a practice of design using AdobeXD, and to make settling up after dinner a little bit easier.",
+    color: "#E95800",
+    github: "https://github.com/aaronbrunet/friendly-tip",
+    tech: ['React','styled-components','Sass']
+  },
+  {
     text: "aaronbru.net / aaronbrunet.dev",
     url: "https://aaronbru.net",
     description:
